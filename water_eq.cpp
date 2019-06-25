@@ -276,8 +276,8 @@ void paintGL() {
 	uid = glGetUniformLocation(programId, "u_mvpMat");
 	glUniformMatrix4fv(uid, 1, GL_FALSE, glm::value_ptr(mvpMat));
 
-	//uid = glGetUniformLocation(programId, "u_texture");
-	//glUniform1i(uid, 0);
+	uid = glGetUniformLocation(programId, "u_texture");
+	glUniform1i(uid, 0);
 
 	// 三角形の描画
 	glDrawElements(GL_TRIANGLES, 3 * (yCells - 1) * (xCells - 1) * 2, GL_UNSIGNED_INT, 0);
